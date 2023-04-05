@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/todo-familia/static/css/main.9bbc84f1.css",
-    "main.js": "/todo-familia/static/js/main.7c210caa.js",
+    "main.css": "/todo-familia/static/css/main.4f73762d.css",
+    "main.js": "/todo-familia/static/js/main.369166d9.js",
     "static/js/787.c4e7f8f9.chunk.js": "/todo-familia/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/loading.svg": "/todo-familia/static/media/loading.5ff8599871e56a8a672f0861a01ef3bc.svg",
     "index.html": "/todo-familia/index.html",
-    "main.9bbc84f1.css.map": "/todo-familia/static/css/main.9bbc84f1.css.map",
-    "main.7c210caa.js.map": "/todo-familia/static/js/main.7c210caa.js.map",
+    "main.4f73762d.css.map": "/todo-familia/static/css/main.4f73762d.css.map",
+    "main.369166d9.js.map": "/todo-familia/static/js/main.369166d9.js.map",
     "787.c4e7f8f9.chunk.js.map": "/todo-familia/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9bbc84f1.css",
-    "static/js/main.7c210caa.js"
+    "static/css/main.4f73762d.css",
+    "static/js/main.369166d9.js"
   ]
 }
