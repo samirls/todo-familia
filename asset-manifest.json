@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/todo-familia/static/css/main.9bbc84f1.css",
-    "main.js": "/todo-familia/static/js/main.0c532ce1.js",
+    "main.js": "/todo-familia/static/js/main.5142f825.js",
     "static/js/787.c4e7f8f9.chunk.js": "/todo-familia/static/js/787.c4e7f8f9.chunk.js",
     "index.html": "/todo-familia/index.html",
     "main.9bbc84f1.css.map": "/todo-familia/static/css/main.9bbc84f1.css.map",
-    "main.0c532ce1.js.map": "/todo-familia/static/js/main.0c532ce1.js.map",
+    "main.5142f825.js.map": "/todo-familia/static/js/main.5142f825.js.map",
     "787.c4e7f8f9.chunk.js.map": "/todo-familia/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9bbc84f1.css",
-    "static/js/main.0c532ce1.js"
+    "static/js/main.5142f825.js"
   ]
 }
