@@ -1,0 +1,128 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  width: 500px;
+  margin: 50px auto;
+  padding: 10px;
+  border-radius: 8px;
+}
+.App h2 {
+  text-align: center;
+}
+h1{
+  margin: 0;
+  padding-bottom: 20px;
+}
+.form{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 12px
+}
+.form input[type="text"]{
+  padding:10px;
+  width: 85%;
+  border: 1px solid #eee;
+  border-radius: 6px;
+}
+.form input[type="text"]:focus,
+.form button[type="submit"]:focus{
+  outline:none;
+}
+.form button[type="submit"]{
+  background-color: #18d150;
+  color: white;
+  font-weight: 900;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+}
+.todo-listItems{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.todo-item{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px
+}
+.item-content{
+  width: 60%
+}
+.todo-item button{
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 8px
+}
+.todo-item button:focus{
+  outline:none
+}
+.update-item{
+  background-color: darkorchid;
+  color: white;
+  font-weight: 900;
+}
+.delete-item{
+  background-color: red;
+  color: white;
+  font-weight: 900;
+}
+.update-form{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.update-new-input{
+  width: 80%;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  padding: 8px;
+  outline: none;
+}
+.update-new-btn{
+  background-color: darkorchid;
+  color: #fff;
+  cursor: pointer;
+}
+
+/*=============== MEDIA QUERIES FOR TABLETS ============== */
+@media screen and (max-width: 1024px){
+
+}
+
+/*=============== MEDIA QUERIES FOR SMARTPHONES ============== */
+@media screen and (max-width: 600px){
+  .App {
+    width: 93%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 18px;
+  }
+  .todo-listItems{
+    width: 90%;
+  }
+  .form{
+    width: 90%;
+    margin-bottom: 6px
+  }
+  .todo-item{
+    gap: 15px;
+  }
+  .item-content{
+    font-size: 12px;
+    width: 90%;
+  }
+  .update-item{
+    font-size: 10px;
+  }
+  .delete-item{
+    font-size: 10px;
+  }
+}
