@@ -50,7 +50,7 @@ function App() {
   const updateItem = async (e) => {
     e.preventDefault()
     try{
-      const res = await axios.put(`http://localhost:5500/api/item/${isUpdating}`, {item: updateItemText})
+      const res = await axios.put(`https://api-todo-familia.onrender.com/api/item/${isUpdating}`, {item: updateItemText})
       console.log(res.data)
       const updatedItemIndex = listItems.findIndex(item => item._id === isUpdating);
       const updatedItem = listItems[updatedItemIndex].item = updateItemText;
