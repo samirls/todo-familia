@@ -116,7 +116,7 @@ function App() {
   return (
     <div className="App">
       {modalDeleteOpen && <ModalDelete
-      messageToDelete="Deletar item?"
+      messageToDelete={currentItem.item}
       onClose={handleOnClose}
       onDelete={() => {
         deleteItem(currentItem._id);

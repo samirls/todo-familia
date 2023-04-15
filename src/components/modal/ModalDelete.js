@@ -18,7 +18,7 @@ function Modal({messageToDelete, onClose, onDelete}) {
   return ReactDOM.createPortal(
     <div className="modalBackground">
       <div className="modalBox">
-        <div>{messageToDelete}</div>
+        <div>Deseja apagar: <span className="messageToDeleteStyles">{messageToDelete}</span> ?</div>
         <div className="buttons">
           <div><button className="deleteButton" onClick={onDelete}>Deletar</button></div>
           <div><button className="cancelButton" onClick={onClose}>Cancelar</button></div>

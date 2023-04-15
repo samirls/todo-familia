@@ -61,3 +61,9 @@
 .cancelButton:active{
   background-color: rgb(125, 125, 125);
 }
+.messageToDeleteStyles{
+  color:rgb(91, 91, 255);
+  font-weight: bolder;
+  font-size: large;
+  font-style: italic;
+}
