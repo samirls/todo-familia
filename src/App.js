@@ -3,6 +3,7 @@ import axios from "axios";
 import "./App.css";
 import { Fragment } from "react";
 import Loading from "./components/layout/Loading";
+import ModalDelete from "./components/modal/ModalDelete";
 
 function App() {
   const [itemText, setItemText] = useState("");
@@ -10,6 +11,17 @@ function App() {
   const [isUpdating, setIsUpdating] = useState("");
   const [updateItemText, setUpdateItemText] = useState("");
   const [removeLoading, setRemoveLoading] = useState(false);
+  const [modalDeleteOpen, setModalDeleteOpen] = useState(false);
+  const [currentItem, setCurrentItem] = useState("");
+
+  //Modal for confirm delete
+  const handleModalDelete = (item) => {
+    setModalDeleteOpen(true);
+    setCurrentItem(item);
+  };
+  const handleOnClose = () => {
+    setModalDeleteOpen(false);
+  };
 
   //add new todo item to database
   const addItem = async (e) => {
@@ -53,6 +65,7 @@ function App() {
       );
       const newListItems = listItems.filter((item) => item._id !== id);
       setListItems(newListItems);
+      setModalDeleteOpen(false);
     } catch (err) {
       console.log(err);
     }
@@ -102,6 +115,15 @@ function App() {
 
   return (
     <div className="App">
+      {modalDeleteOpen && <ModalDelete
+      messageToDelete="Deletar item?"
+      onClose={handleOnClose}
+      onDelete={() => {
+        deleteItem(currentItem._id);
+      }}
+      
+
+      />}
       <h2>Lista de Tarefas da </h2>
       <h1>Familia Laguardia</h1>
       <form className="form" onSubmit={(e) => addItem(e)}>
@@ -131,12 +153,7 @@ function App() {
                 >
                   Modificar
                 </button>
-                <button
-                  className="delete-item"
-                  onClick={() => {
-                    deleteItem(item._id);
-                  }}
-                >
+                <button className="delete-item" onClick={() => handleModalDelete(item)}>
                   Já fiz / Deletar
                 </button>
               </Fragment>

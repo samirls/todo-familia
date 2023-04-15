@@ -1,0 +1,63 @@
+.modalBackground{
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overflow-hidden{
+  height: 100vh;
+  overflow: hidden;
+}
+.modalBox{
+  background-color: white;
+  position: absolute;
+  padding: 20px;
+  border-radius: 15px;
+
+  width: 50%;
+  height: 20%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.buttons{
+  padding-top: 30px;
+  
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
+.deleteButton{
+  background-color: red;
+  color: white;
+  font-weight: 900;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+}
+.deleteButton:hover{
+  background-color: rgb(206, 40, 40);
+}
+.deleteButton:active{
+  background-color: rgb(255, 71, 71);
+}
+.cancelButton{
+  background-color: rgb(92, 92, 92);
+  color: white;
+  font-weight: 900;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+}
+.cancelButton:hover{
+  background-color: rgb(70, 70, 70);
+}
+.cancelButton:active{
+  background-color: rgb(125, 125, 125);
+}
