@@ -28,7 +28,7 @@ function App() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "https://api-todo-familia.onrender.com/api/item",
+        "http://129.148.20.196:3000/api/item",
         { item: itemText }
       );
       setListItems((prev) => [...prev, res.data]);
@@ -44,7 +44,7 @@ function App() {
       const getItemsList = async () => {
         try {
           const res = await axios.get(
-            "https://api-todo-familia.onrender.com/api/items"
+            "http://129.148.20.196:3000/api/items"
           );
           setListItems(res.data);
           console.log("render");
@@ -61,7 +61,7 @@ function App() {
   const deleteItem = async (id) => {
     try {
       const res = await axios.delete(
-        `https://api-todo-familia.onrender.com/api/item/${id}`
+        `http://129.148.20.196:3000/api/item/${id}`
       );
       const newListItems = listItems.filter((item) => item._id !== id);
       setListItems(newListItems);
@@ -76,7 +76,7 @@ function App() {
     e.preventDefault();
     try {
       const res = await axios.put(
-        `https://api-todo-familia.onrender.com/api/item/${isUpdating}`,
+        `http://129.148.20.196:3000/api/item/${isUpdating}`,
         { item: updateItemText }
       );
       console.log(res.data);
