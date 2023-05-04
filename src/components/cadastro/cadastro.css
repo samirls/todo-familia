@@ -1,0 +1,69 @@
+.cadastro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  width: 500px;
+  margin: 50px auto;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+}
+.cadastro h2 {
+  text-align: center;
+  text-decoration: none;
+  color: rgb(0, 81, 255);
+}
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.cadastroButton{
+  width: 50%;
+}
+select{
+  width: 98%;
+  border: 1px solid rgb(0, 81, 255);
+  border-radius: 5px;
+  background-color: #f6f5ff;
+}
+.showMessage {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100px;
+  background-color: #55db59;
+  color: #000000;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  animation: fadeOut 6s forwards;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+/*=============== MEDIA QUERIES FOR SMARTPHONES ============== */
+@media screen and (max-width: 600px){
+  .cadastro {
+    width: 93%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 18px;
+  }
+
+}

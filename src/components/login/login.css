@@ -1,0 +1,54 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  width: 500px;
+  margin: 50px auto;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+}
+.login h2 {
+  color: rgb(0, 81, 255);
+  text-align: center;
+  text-decoration: none;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.loginButton{
+  width: 50%;
+}
+input{
+  border: 1px solid rgb(0, 81, 255);
+  border-radius: 10px;
+  padding-left: 8px;
+}
+.loginButton{
+  background-color: #18d150;
+  color: white;
+  font-weight: 900;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+}
+.loginButton:hover{
+  background-color: #25b650;
+}
+
+
+/*=============== MEDIA QUERIES FOR SMARTPHONES ============== */
+@media screen and (max-width: 600px){
+  .login {
+    width: 93%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 18px;
+  }
+
+}
