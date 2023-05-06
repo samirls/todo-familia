@@ -62,7 +62,7 @@ function Cadastro() {
     <div className="cadastro">
       <h2>Cadastro</h2>
       <form onSubmit={handleSubmit}>
-        <input type="text" name="userName" placeholder="Seu nome" value={formData.userName} onChange={handleChange} required/>
+        <input type="text" name="userName" placeholder="Seu primeiro nome" value={formData.userName} onChange={handleChange} required/>
         <input type="text" name="familyName" placeholder="Nome da Família" value={formData.familyName} onChange={handleChange} required/>
         <input type="email" name="email" placeholder="E-mail" value={formData.email} onChange={handleChange} autoComplete="current-email" required/>
         <input type="password" name="password" placeholder="Senha / Password" value={formData.password} onChange={handleChange} autoComplete="current-password" required/>

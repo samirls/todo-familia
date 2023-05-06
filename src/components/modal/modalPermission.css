@@ -1,0 +1,100 @@
+.modalBackground2{
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overflow-hidden2{
+  height: 100vh;
+  overflow: hidden;
+}
+.permission {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  width: 550px;
+  margin: 5px auto;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+  height: 80vh;
+  width: 45vw;
+  overflow: scroll;
+}
+.permission h2 {
+  text-align: center;
+  text-decoration: none;
+  color: rgb(0, 81, 255);
+}
+.permission span{
+  align-self: flex-end;
+  padding-right: 5px;
+  font-weight: 900;
+  font-size: 1.3rem;
+}
+.permission span:hover{
+  cursor: pointer;
+  color: rgb(190, 13, 13);
+}
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.permissionButton{
+  width: 50%;
+}
+ul{
+  text-align: justify;
+}
+.showPermissionMessage {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100px;
+  background-color: #55db59;
+  color: #000000;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  animation: fadeOut 4s forwards;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.allPermitions{
+  width: 90%;
+}
+.allPermitions h4{
+  margin: 0px;
+  padding-top: 40px;
+  padding-bottom: 15px;
+}
+.cancelarButton{
+  margin-top: 20px;
+}
+
+/*=============== MEDIA QUERIES FOR SMARTPHONES ============== */
+@media screen and (max-width: 600px){
+  .permission {
+    height: 80vh;
+    width: 85vw;
+    overflow: scroll;
+  }
+
+}

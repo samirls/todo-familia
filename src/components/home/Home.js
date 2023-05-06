@@ -26,6 +26,7 @@ function Home() {
   };
 
   //add new todo item to database
+
   const addItem = async (e) => {
     e.preventDefault();
     try {

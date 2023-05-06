@@ -1,0 +1,25 @@
+.singlePermitionContainer{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 5px;
+}
+.updateAndDeleteButtons{
+  display: flex;
+  gap: 30px;
+}
+
+/*=============== MEDIA QUERIES FOR SMARTPHONES ============== */
+@media screen and (max-width: 600px){
+  .singlePermitionContainer{
+    width: 100%;
+  }
+  .updateAndDeleteButtons{
+    gap: 5px;
+  }
+  .updateAndDeleteButtons button{
+    font-size: 0.8rem;
+  }
+}

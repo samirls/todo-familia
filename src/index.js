@@ -10,6 +10,7 @@ import Login from "./components/login/Login"
 import Cadastro from "./components/cadastro/Cadastro"
 import Instructions from './components/instructions/Instructions';
 
+
 const token = localStorage.getItem("token");
 
 const router = createBrowserRouter([

@@ -25,7 +25,7 @@ function Modal({messageToDelete, onClose, onDelete}) {
         </div>
       </div>
     </div>,
-    document.querySelector(".modal-container")
+    document.querySelector(".modal-container1")
   )
 }
 

@@ -2,11 +2,19 @@ import "./header.css";
 import { Link } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import { useState, useEffect } from "react";
+import ModalPermission from "../modal/ModalPermission";
 
 function Header() {
+  const [familyNameClass, setFamilyNameClass] = useState("");
+  const [modalPermissionOpen, setModalPermissionOpen] = useState(false);
 
-  const [familyNameClass, setFamilyNameClass] = useState("")
-
+  const closeModalPermission = () => {
+    setModalPermissionOpen(false);
+  };
+  const handleOnOpen = () => {
+    setModalPermissionOpen(true);
+  };
+  
   const jwtToken = localStorage.getItem("token");
 
   const logout = () => {
@@ -39,10 +47,10 @@ function Header() {
     }
   }, [decodedToken]);
 
-
-
   return (
+
     <div className="header">
+          {modalPermissionOpen && <ModalPermission onClose2={closeModalPermission} />}
       <h2>Lista de Tarefas da </h2>
       {jwtToken ? (
         <h1>
@@ -54,19 +62,33 @@ function Header() {
       ) : (
         <h1>Sua Família</h1>
       )}
-      {jwtToken && <p>Olá <span className={familyNameClass}>{decodedToken ? decodedToken.userName : ""}</span>!</p>}
+      {jwtToken && (
+        <p>
+          Olá{" "}
+          <span className={familyNameClass}>
+            {decodedToken ? decodedToken.userName : ""}
+          </span>
+          !
+        </p>
+      )}
       <div className="links">
-        {!jwtToken && (
-          <h3>
-            <Link className="link" to="/TODO">
-              Home
-            </Link>
-          </h3>
-        )}
+        <h3>
+          <Link className="link" to="/TODO">
+            Home
+          </Link>
+        </h3>
+
         {!jwtToken && (
           <h3>
             <Link className="link" to="/TODO/login">
               Login
+            </Link>
+          </h3>
+        )}
+        {jwtToken && (
+          <h3>
+            <Link className="link" onClick={handleOnOpen}>
+              Permissões
             </Link>
           </h3>
         )}

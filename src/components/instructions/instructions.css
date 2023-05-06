@@ -28,6 +28,13 @@ li {
 li::marker{
   color: rgb(0, 17, 255);
 }
+a{
+  color: rgb(43, 0, 236);
+  text-decoration: none;
+}
+footer {
+  padding-top: 20px;
+}
 
 /*=============== MEDIA QUERIES FOR SMARTPHONES ============== */
 @media screen and (max-width: 600px){
