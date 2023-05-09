@@ -32,7 +32,7 @@ function ModalPermission({ onClose2 }) {
 
     try {
       const response = await axios.post(
-        "http://localhost:5500/api/items/authorize-all",
+        "http://129.148.20.196/api/items/authorize-all",
         { targetUserId: targetUserId, userId: decodedToken.userId },
         {
           headers: {
@@ -41,7 +41,7 @@ function ModalPermission({ onClose2 }) {
         }
       );
       const response2 = await axios.post(
-        "http://localhost:5500/api/authorizations",
+        "http://129.148.20.196/api/authorizations",
         { nameTo: userBName, permissionTo: targetUserId },
         {
           headers: {
@@ -70,7 +70,7 @@ function ModalPermission({ onClose2 }) {
       const getPermissionsList = async () => {
         try {
           const res = await axios.get(
-            "http://localhost:5500/api/all-authorizations", {
+            "http://129.148.20.196/api/all-authorizations", {
               headers: {
                 'Authorization': `Bearer ${jwtToken}`
               }
@@ -89,7 +89,7 @@ function ModalPermission({ onClose2 }) {
   const deletePermission = async (id) => {
     try {
       const res = await axios.delete(
-        `http://localhost:5500/api/permission/${id}`
+        `http://129.148.20.196/api/permission/${id}`
       );
       const newPermissionList = permissionsList.filter((item) => item._id !== id);
       setPermissionsList(newPermissionList);
@@ -103,7 +103,7 @@ function ModalPermission({ onClose2 }) {
 
     try {
       const response = await axios.post(
-        "http://localhost:5500/api/items/authorize-all",
+        "http://129.148.20.196/api/items/authorize-all",
         { targetUserId: permissionTo, userId: permissionFrom },
         {
           headers: {

@@ -10,7 +10,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:5500/api/login", {
+      const response = await axios.post("http://129.148.20.196/api/login", {
         email,
         password,
       });

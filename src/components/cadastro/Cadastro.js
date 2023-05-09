@@ -28,7 +28,7 @@ function Cadastro() {
     event.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5500/api/signup', formData);
+      const response = await axios.post('http://129.148.20.196/api/signup', formData);
       const { token, userId } = response.data;
       setShowMessage(true);
       setFormData({
