@@ -31,7 +31,7 @@ function Home() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://129.148.20.196/api/item",
+        `http://localhost:3000/api/item`,
         { item: itemText },
         {
           headers: {
@@ -52,7 +52,7 @@ function Home() {
       const getItemsList = async () => {
         try {
           const res = await axios.get(
-            "http://129.148.20.196/api/items", {
+            `http://localhost:3000/api/items`, {
               headers: {
                 'Authorization': `Bearer ${jwtToken}`
               }
@@ -72,7 +72,7 @@ function Home() {
   const deleteItem = async (id) => {
     try {
       const res = await axios.delete(
-        `http://129.148.20.196/api/item/${id}`
+        `http://localhost:3000/api/item/${id}`
       );
       const newListItems = listItems.filter((item) => item._id !== id);
       setListItems(newListItems);
@@ -87,7 +87,7 @@ function Home() {
     e.preventDefault();
     try {
       const res = await axios.put(
-        `http://129.148.20.196/api/item/${isUpdating}`,
+        `http://localhost:3000/api/item/${isUpdating}`,
         { item: updateItemText }
       );
       console.log(res.data);
